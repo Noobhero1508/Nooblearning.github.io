@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Links</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Prata', serif;
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://i.pinimg.com/originals/d4/42/9e/d4429e833937f4733fa37d8e86b3675f.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+        }
+
+        .side-links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left {
+            flex: 1;
+            align-items: flex-start;
+        }
+
+        .right {
+            flex: 1;
+            align-items: flex-end;
+        }
+
+        .main-links, .content-links {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 180px;
+            height: 60px;
+            margin: 15px;
+            text-decoration: none;
+            color: #000000;
+            font-size: 20px;
+            border-radius: 15px;
+            background-color: rgba(144, 238, 144, 0.7);
+            border: 2px solid #FFFFFF;
+            transition: all 0.3s ease;
+        }
+
+        .green {
+            background-color: rgba(144, 238, 144, 0.7);
+            color: #000000;
+            width: 240px;
+        }
+
+        .blue {
+            background-color: rgba(144, 238, 144, 0.7);
+            color: #000000;
+            width: 360px;
+            height: 72px;
+            font-size: 22px;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(144, 238, 144, 0.7);
+            color: #000000;
+            width: 120px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 18px;
+            border: 2px solid #FFFFFF;
+            display: none;
+        }
+
+        .link:hover, .back-button:hover {
+            background-color: rgba(144, 238, 144, 0.9);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="back-button" id="backButton" onclick="goBack()">Quay Lại</a>
+    <div class="container">
+        <div class="side-links left">
+            <a href="https://www.google.com/" class="link green" target="_blank">Google</a>
+            <a href="https://chatgpt.com/" class="link green" target="_blank">ChatGPT</a>
+            <a href="https://translate.google.com/" class="link green" target="_blank">Dịch thuật</a>
+            <a href="https://drive.google.com/drive/u/0/folders/0ADF768zYnbXuUk9PVA" class="link green" target="_blank">Google Drive</a>
+            <a href="https://www.notion.so/" class="link green" target="_blank">Notion</a>
+        </div>
+        <div class="main-links">
+            <a href="#" class="link blue" onclick="showLinks('toan')">Toán</a>
+            <a href="#" class="link blue" onclick="showLinks('ly')">Lý</a>
+            <a href="#" class="link blue" onclick="showLinks('hoa')">Hoá</a>
+            <a href="#" class="link blue" onclick="showLinks('dgnl')">ĐGNL APT</a>
+        </div>
+        <div class="side-links right">
+            <a href="https://mapstudy.edu.vn/" class="link green" target="_blank">Mapstudy</a>
+            <a href="https://moon.vn/" class="link green" target="_blank">Moon</a>
+        </div>
+    </div>
+
+    <div id="toan" class="content-links" style="display: none;">
+        <a href="https://www.facebook.com/groups/1481320765986992" class="link blue" target="_blank">Nhóm I</a>
+        <a href="https://www.facebook.com/groups/1035854874912792" class="link blue" target="_blank">Nhóm M</a>
+        <a href="https://www.facebook.com/groups/hoibaithayvna" class="link blue" target="_blank">Nhóm Hỏi bài</a>
+        <a href="https://docs.google.com/spreadsheets/d/18KGi__t4eIQs56M1U5Cq_4H5lCEjHKGImRg6ldm5QBU/htmlview" class="link blue" target="_blank">Link Tổng Hợp I</a>
+        <a href="https://docs.google.com/spreadsheets/d/18KGi__t4eIQs56M1U5Cq_4H5lCEjHKGImRg6ldm5QBU/htmlview" class="link blue" target="_blank">Link Tổng Hợp M</a>
+        <a href="https://docs.google.com/spreadsheets/d/1u1mH5LXciiG_X3CCAmdkQxdc7ChHqv1Ry_-yh48fJYU/edit?usp=sharing" class="link blue" target="_blank">1000 Câu Đúng Sai</a>
+    </div>
+
+    <div id="ly" class="content-links" style="display: none;">
+        <a href="https://www.facebook.com/groups/310598628440548" class="link blue" target="_blank">Nhóm I</a>
+        <a href="https://www.facebook.com/groups/898113942351911" class="link blue" target="_blank">Nhóm M</a>
+        <a href="https://www.facebook.com/groups/hoibaithayvna" class="link blue" target="_blank">Nhóm Hỏi bài</a>
+        <a href="https://mapstudy.edu.vn/khoa-hoc/khoa-i---luyen-thi-thpt-mon-vat-ly-nam-2025" class="link blue" target="_blank">Web tổng hợp</a>
+    </div>
+
+    <div id="hoa" class="content-links" style="display: none;">
+        <a href="https://docs.google.com/spreadsheets/d/1B1tgX3rYly-G6ZSx7bOAD1nPlWT5_vSmIoAIb-FM-2o/edit?gid=0#gid=0" class="link blue" target="_blank">Link tổng hợp Lớp 10</a>
+        <a href="https://docs.google.com/spreadsheets/d/1aJI1h6QYl9lZ2CmM5qx-FidbA_rdHO9U0tlLC2o5mO8/edit?gid=0#gid=0" class="link blue" target="_blank">Link tổng hợp Lớp 11</a>
+        <a href="https://www.facebook.com/groups/1197487594549118" class="link blue" target="_blank">Link tổng hợp I</a>
+        <a href="https://docs.google.com/spreadsheets/d/17CYw_me6ltIkt9Hqkq2iBoa-THPhq5cW_ACIpvDNy1o/edit?gid=0#gid=0" class="link blue" target="_blank">Link tổng hợp M</a>
+        <a href="https://docs.google.com/spreadsheets/d/1d5uhs6gF5eW3h-dYeDHvoZnloXZ2qILTSjEcAyZgniA/edit?usp=sharing" class="link blue" target="_blank">Link tổng hợp O</a>
+        <a href="https://www.facebook.com/groups/1983662308674644" class="link blue" target="_blank">ĐGNL Hoá</a>
+        <a href="https://www.facebook.com/groups/339825519117801" class="link blue" target="_blank">Group VIP Hoá</a>
+    </div>
+
+    <div id="dgnl" class="content-links" style="display: none;">
+        <a href="https://www.facebook.com/groups/424460433415547" class="link blue" target="_blank">Nhóm VIP</a>
+        <a href="https://www.facebook.com/groups/hoidapdgnlmapstudy" class="link blue" target="_blank">Nhóm Hỏi Bài</a>
+        <a href="https://mapstudy.edu.vn/khoa-hoc/khoa-luyen-thi-danh-gia-nang-luc---dai-hoc-quoc-gia-tphcm-apt---2025" class="link blue" target="_blank">Web tổng hợp</a>
+    </div>
+
+    <script>
+        function showLinks(subject) {
+            document.querySelector('.container').style.display = 'none';
+            document.getElementById(subject).style.display = 'flex';
+            document.getElementById('backButton').style.display = 'flex';
+        }
+
+        function goBack() {
+            document.querySelector('.container').style.display = 'flex';
+            document.querySelectorAll('.content-links').forEach(div => div.style.display = 'none');
+            document.getElementById('backButton').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
